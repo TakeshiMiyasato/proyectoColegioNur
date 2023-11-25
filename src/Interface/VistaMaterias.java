@@ -20,7 +20,7 @@ public class VistaMaterias extends JFrame {
 
     public  VistaMaterias()throws SQLException {
 
-
+// Hola ke ase
 
         setSize(800,800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
