@@ -38,6 +38,22 @@ public class Clase {
         return hora_inicio;
     }
 
+    public String getNombreAula() {
+        return nombreAula;
+    }
+
+    public void setNombreAula(String nombreAula) {
+        this.nombreAula = nombreAula;
+    }
+
+    public String getNombreMateria() {
+        return nombreMateria;
+    }
+
+    public void setNombreMateria(String nombreMateria) {
+        this.nombreMateria = nombreMateria;
+    }
+
     public void setHora_inicio(String hora_inicio) {
         this.hora_inicio = hora_inicio;
     }

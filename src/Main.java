@@ -16,15 +16,19 @@ public class Main {
             DatabaseSingleton dbInstance = DatabaseSingleton.getInstance();
             SeguridadDAOimpl seguridadDAOimpl=new SeguridadDAOimpl(dbInstance.getConnection());
             PersonalDAOimpl personalDAOimpl = new PersonalDAOimpl(dbInstance.getConnection());
-//            Incredulo i = new Incredulo();
+            Incredulo i = new Incredulo();
+           // i.setVisible(true);
 //
 //            Login login=new Login(seguridadDAOimpl);
 //            login.setVisible(true);
 //            VistaAdministrativo vistaAdministrativo = new VistaAdministrativo();
 //            vistaAdministrativo.setVisible(true);
-            VistaPersonal vp = new VistaPersonal();
-            VistaMaterias vm = new VistaMaterias();
-
+//            VistaPersonal vp = new VistaPersonal();
+//            VistaMaterias vm = new VistaMaterias();
+//VistaPersonal vistaPersonal= new VistaPersonal();
+//vistaPersonal.setVisible(true);
+//VistaClase vistaClase= new VistaClase();
+//vistaClase.setVisible(true);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

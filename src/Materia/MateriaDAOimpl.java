@@ -83,6 +83,22 @@ public class MateriaDAOimpl implements MateriaDAO {
     }
 
     @Override
+    public ArrayList<Materia> ObtenerMAteriasProfesor() throws SQLException {
+        ArrayList<Materia> materi = new ArrayList<>();
+        String sql = "select nombre from materias where profesorId=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        ResultSet resultSet = statement.executeQuery();
+        while(resultSet.next()){
+            Materia materia = new Materia();
+            materia.setNombre(resultSet.getString("nombre"));
+            materi.add(materia);
+        }
+        resultSet.close();
+        statement.close();
+        return materi;
+    }
+
+    @Override
     public void modificar(Materia materia) throws SQLException {
         String sql = "UPDATE materia SET nombre = ?, profesorId= ?, gestion= ? " +
                 "WHERE id = ?";

@@ -36,9 +36,9 @@ public class VistaAdministrativo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                VistaMaterias vistaMaterias= null;
+                VistaMateriasAdministrativo vistaMaterias= null;
                 try {
-                    vistaMaterias = new VistaMaterias();
+                    vistaMaterias = new VistaMateriasAdministrativo();
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }

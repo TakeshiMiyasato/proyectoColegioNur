@@ -71,10 +71,11 @@ public class ClaseDAOImpl implements  ClaseDAO{
         ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()){
             Clase clase = new Clase();
-
             clase.setId(resultSet.getInt("id"));
             clase.setAulaId(resultSet.getInt("aulaId"));
             clase.setMateriaId(resultSet.getInt("materiaId"));
+            clase.setNombreAula(resultSet.getString("denominacion"));
+            clase.setNombreMateria(resultSet.getString("nombre"));
             clase.setHora_inicio(resultSet.getString("hora_inicio"));
             clase.setHora_final(resultSet.getString("hora_final"));
             clases.add(clase);
@@ -95,6 +96,8 @@ public class ClaseDAOImpl implements  ClaseDAO{
             clase.setId(resultSet.getInt("id"));
             clase.setAulaId(resultSet.getInt("aulaId"));
             clase.setMateriaId(resultSet.getInt("materiaId"));
+            clase.setNombreAula(resultSet.getString("denominacion"));
+            clase.setNombreMateria(resultSet.getString("nombre"));
             clase.setHora_inicio(resultSet.getString("hora_inicio"));
             clase.setHora_final(resultSet.getString("hora_final"));
             clases.add(clase);

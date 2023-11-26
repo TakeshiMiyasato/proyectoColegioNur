@@ -153,5 +153,7 @@ public class PersonalDAOimpl implements PersonalDAO {
         statement.setInt(7,personal.getId());
         statement.executeUpdate();
         statement.close();
+
+
     }
 }
